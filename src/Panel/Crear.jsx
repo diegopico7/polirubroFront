@@ -5,8 +5,12 @@ import { Global } from "../helpers/Global";
 import { NavLink } from "react-router-dom";
 
 export const Crear = () => {
-  const { form, changed } = useForm({});
+  const { form, changed } = useForm({ categoria: "libreria" });
   const [resultado, setResultado] = useState("no creaste nada");
+
+  const limpiarFormulario = () => {
+    setResultado("no creaste nada"); // Oculta el mensaje de "Artículo guardado"
+  };
 
   const guardarArticulo = async (e) => {
     e.preventDefault();
@@ -57,6 +61,16 @@ export const Crear = () => {
             placeholder=" descripcion articulo"
             onChange={changed}
           />
+
+          <label htmlFor="categoria">Categoría:</label>
+          <select name="categoria" onChange={changed}>
+            <option value="libreria">libreria</option>
+            <option value="juguetes">juguetes</option>
+            <option value="bijouterie">bijouterie</option>
+            <option value="maquillaje">maquillaje</option>
+            <option value="varios">varios</option>
+          </select>
+
           <label htmlFor="precio">Precio:</label>
           <input
             type="number"
@@ -65,22 +79,18 @@ export const Crear = () => {
             onChange={changed}
           />
 
-          <label htmlFor="categoria">Categoría:</label>
-          <select name="categoria" onChange={changed}>
-            <option value="libreria">librería</option>
-            <option value="juguetes">juguetes</option>
-            <option value="bijouterie">bijouterie</option>
-            <option value="maquillaje">maquillaje</option>
-            <option value="varios">varios</option>
-          </select>
-
           <label htmlFor="file0">Imagen</label>
           <input type="file" name="file0" id="file" />
 
           <div className="contenedor-btn">
             <input type="submit" value="  Enviar  " />
-            <input type="reset" value=" Reestrablecer " />
+            <input
+              type="reset"
+              value=" Reestrablecer "
+              onClick={limpiarFormulario}
+            />
           </div>
+
           <strong>{resultado === "guardado" ? "Articulo guardado" : ""}</strong>
           <strong>{resultado === "error" ? "Articulo no guardado" : ""}</strong>
         </form>

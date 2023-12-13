@@ -86,7 +86,7 @@ export default function NavBar() {
 
   return (
     <div className="navv">
-      {["Menu"].map((anchor) => (
+      {["left"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer

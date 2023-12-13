@@ -33,11 +33,9 @@ export const CarritoProvider = ({ children }) => {
   };
 
   const [listaCompras, dispatch] = useReducer(comprasReducer, initialState);
-  console.log("Lista de compras:", listaCompras);
 
   const agregarCompra = (compra) => {
     compra.cantidad = 1;
-    compra.precio = 20;
 
     const action = {
       type: "[CARRITO] Agregar Compra",

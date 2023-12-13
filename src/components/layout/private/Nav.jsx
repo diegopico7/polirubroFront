@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo1 from "../../../assets/img/user.png";
+import logo1 from "../../../assets/img/Logos/LOGOPOLI.JPG";
 
 export const Nav = () => {
   return (
@@ -12,23 +12,23 @@ export const Nav = () => {
           </NavLink>
         </li>
         <li className="menu-list__item">
-          <NavLink to="/admin/ventas" className="menu-list__link">
+          <NavLink to="/admin/crear" className="menu-list__link">
             <i className="fa-solid fa-plus"></i>
             <span className="menu-list__title">Crear</span>
           </NavLink>
         </li>
         <li className="menu-list__item">
-          <a href="#" className="menu-list__link">
+          <NavLink to="/admin/editar" className="menu-list__link">
             <i className="fa-solid fa-list"></i>
             <span className="menu-list__title">Editar</span>
-          </a>
+          </NavLink>
         </li>
 
         <li className="menu-list__item">
-          <a href="#" className="menu-list__link">
+          <NavLink to="/admin/borrar" className="menu-list__link">
             <i className="fa-solid fa-trash"></i>
             <span className="menu-list__title">Borrar</span>
-          </a>
+          </NavLink>
         </li>
       </ul>
 
