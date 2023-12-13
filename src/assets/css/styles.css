@@ -853,3 +853,104 @@ background: linear-gradient(to right,  rgba(238,238,238,1) 0%,rgba(204,204,204,1
     grid-template-columns: 1fr; /* Muestra los botones en una sola columna en pantallas más pequeñas */
   }
 }
+
+/*productos*/
+.formulario-carga {
+  background-color: rgb(92, 89, 234);
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-carga input {
+  background-color: antiquewhite;
+  height: 30px;
+  border: transparent;
+  border-radius: 5px;
+}
+.formulario-carga label {
+  color: wheat;
+}
+
+.contenedor-btn {
+  margin: 15px;
+}
+
+.contenedor-btn input {
+  margin: 10px;
+}
+.titulo-carga{
+  text-align: center;
+}
+
+/*edicion*/
+.contenedor-todos {
+  background-color: rgb(220, 235, 249);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+ 
+}
+.card-editar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.volver-editar{
+  text-align: center;
+
+}
+.articulo-contenedor {
+  width: 170px;
+  height: auto;
+  max-height: 294px;
+  background-color: rgb(98, 98, 99);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-productos {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 9px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.articulo-contenedor h4 {
+  text-align: center;
+  color: rgb(226, 232, 245);
+}
+.articulo-contenedor p {
+  text-align: center;
+  font-size: 0.6em;
+  color: rgb(226, 232, 245);
+}
+
+
+.contenedor-cardEditar{
+  display: flex;
+  justify-content: space-around;
+}
+
+.producto-contenedor{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}

@@ -3,29 +3,17 @@
 import { useState } from "react";
 import "../../assets/css/card.css";
 import { Global } from "../../helpers/Global";
+import { Link } from "react-router-dom";
 
-export const Card = ({
+export const CardEdit = ({
   imagen,
   titulo,
   descripcion,
   categoria,
   precio,
-  handleAgregar,
-  handleQuitar,
-  handleAumentar,
-  handleDisminuir,
+  articulos,
+  setArticulos,
 }) => {
-  const [added, setAdded] = useState(false);
-
-  const clickAgregar = () => {
-    handleAgregar();
-    setAdded(true);
-  };
-  const clickQuitar = () => {
-    handleQuitar();
-    setAdded(false);
-  };
-
   return (
     <div className="articulo-contenedor ">
       {imagen != "default.png" && (
@@ -46,15 +34,11 @@ export const Card = ({
       <p className="">{categoria}</p>
       <p className="">${precio}</p>
 
-      {added ? (
-        <button type="button" className="boton-quitar" onClick={clickQuitar}>
-          Quitar del Carrito
-        </button>
-      ) : (
-        <button type="button" className="boton-agregar" onClick={clickAgregar}>
-          Agregar Carrito
-        </button>
-      )}
+      <button>
+        <Link to={"/admin/edicion/"} className="edit">
+          Editar
+        </Link>
+      </button>
     </div>
   );
 };

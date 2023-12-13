@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export const Peticion = async (
   url,
   metodo,
