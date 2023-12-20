@@ -6,10 +6,16 @@ export const ProductosProvider = ({ children }) => {
   const [articulos, setArticulos] = useState([]);
 
   const fetchProductos = async () => {
-    const response = await fetch("http://localhost:3900/articulos");
+    const response = await fetch(
+      "https://backpolirubro.onrender.com/articulos"
+    );
     const data = await response.json();
 
     setArticulos(data.articulos);
+  };
+
+  const actualizarProductos = (nuevosArticulos) => {
+    setArticulos(nuevosArticulos);
   };
 
   useEffect(() => {
@@ -17,7 +23,7 @@ export const ProductosProvider = ({ children }) => {
   }, []);
 
   return (
-    <ProductosContext.Provider value={{ articulos }}>
+    <ProductosContext.Provider value={{ articulos, actualizarProductos }}>
       {children}
     </ProductosContext.Provider>
   );

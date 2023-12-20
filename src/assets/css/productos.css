@@ -1,0 +1,160 @@
+/* lista de productos*/
+.contenedor-filtrado {
+  text-align: center;
+  margin: 10px;
+}
+
+.producto-contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.articulo-contenedor {
+  width: 170px;
+  height: auto;
+  max-height: 294px;
+  background-color: rgb(98, 98, 99);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-productos {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 9px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.articulo-contenedor h4 {
+  text-align: center;
+  color: rgb(226, 232, 245);
+}
+.articulo-contenedor p {
+  text-align: center;
+  font-size: 0.6em;
+  color: rgb(226, 232, 245);
+}
+
+/*carrito*/
+
+@media print {
+  .hide-print {
+    display: none;
+  }
+}
+.contenedor-total-carrito {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+.titulo-carrito,
+.tus-productos {
+  text-align: center;
+  margin: 10px;
+}
+
+.tabla-contenedora {
+  width: 60%;
+}
+
+.table {
+  background-color: #eaeef7;
+  margin-left: 10px;
+  width: 95%;
+}
+.titulo-tabla {
+  border: 1px solid black;
+}
+.titulo-tabla th {
+  padding: 3px;
+}
+.body-tabla {
+  font-size: 1rem;
+  border: 1px solid black;
+}
+
+.btn-cant {
+  width: 25px;
+  margin: 2px;
+  height: 25px;
+}
+.btn-eliminar-td {
+  text-align: center;
+}
+.btn-eliminar {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  text-align: center;
+}
+@media (max-width: 792px) {
+  .td-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.td-total {
+  font-weight: 800;
+}
+
+.btn-compras {
+  width: 95%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.btn-comprar {
+  margin: 0;
+}
+
+@media (max-width: 792px) {
+  .tabla-contenedora {
+    width: 100%;
+  }
+  .table {
+    margin-right: 0;
+  }
+  .btn-compras {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  .btn-comprar {
+    margin-left: 15px;
+    width: 35%;
+    font-size: 1rem;
+  }
+  .contenedor-total-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+/*formulario contacto carrito*/
+.contenedor-form-contacto {
+  background: #fbfcfc;
+}
+
+.contenedor-datos {
+  text-align: center;
+}

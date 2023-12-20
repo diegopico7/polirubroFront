@@ -22,13 +22,19 @@ export const BorrarArticulo = () => {
 
   return (
     <>
-      {cargando ? (
-        "Cargando articulos....."
-      ) : articulos.length >= 1 ? (
-        <ListadoArtBorrar articulos={articulos} setArticulos={setArticulos} />
-      ) : (
-        <h2>No hay articulos para mostrar</h2>
-      )}
+      <div className="card-borrar">
+        {cargando ? (
+          "Cargando articulos....."
+        ) : articulos.length >= 1 ? (
+          <ListadoArtBorrar
+            key={articulos._id}
+            articulos={articulos}
+            setArticulos={setArticulos}
+          />
+        ) : (
+          <h2>No hay articulos para mostrar</h2>
+        )}
+      </div>
     </>
   );
 };

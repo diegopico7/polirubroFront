@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
-import card1 from "../../assets/img/Logos/LOGOPOLI.jpg";
-import card2 from "../../assets/img/Logos/logosinsombra.jpg";
-import card3 from "../../assets/img/Logos/LOGOSPOLI1.jpg";
+import jugueteria from "../../assets/img/Logos/tarjetas/2.png";
+import libreria from "../../assets/img/Logos/tarjetas/1.png";
+import maquillaje from "../../assets/img/Logos/tarjetas/3.png";
+import bijouterie from "../../assets/img/Logos/tarjetas/4.png";
+import varios from "../../assets/img/Logos/tarjetas/5.png";
 
 export const Productos = () => {
   return (
@@ -11,7 +13,7 @@ export const Productos = () => {
         <div className="gallery">
           <NavLink to="/productos" className="card">
             <figure>
-              <img src={card1} alt="carta1" />
+              <img src={jugueteria} alt="carta1" />
               <figcaption>
                 <h3 className="card-text">Jugueteria</h3>
               </figcaption>
@@ -19,7 +21,7 @@ export const Productos = () => {
           </NavLink>
           <NavLink to="/productos" className="card">
             <figure>
-              <img src={card2} alt="carta2" />
+              <img src={libreria} alt="carta2" />
               <figcaption>
                 <h3 className="card-text">Libreria</h3>
               </figcaption>
@@ -27,7 +29,7 @@ export const Productos = () => {
           </NavLink>
           <NavLink to="/productos" className="card">
             <figure>
-              <img src={card3} alt="carta3" />
+              <img src={maquillaje} alt="carta3" />
               <figcaption>
                 <h3 className="card-text">Maquillaje</h3>
               </figcaption>
@@ -35,7 +37,15 @@ export const Productos = () => {
           </NavLink>
           <NavLink to="/productos" className="card">
             <figure>
-              <img src={card3} alt="carta3" />
+              <img src={bijouterie} alt="carta3" />
+              <figcaption>
+                <h3 className="card-text">Bijouterie</h3>
+              </figcaption>
+            </figure>
+          </NavLink>{" "}
+          <NavLink to="/productos" className="card">
+            <figure>
+              <img src={varios} alt="carta3" />
               <figcaption>
                 <h3 className="card-text">Varios</h3>
               </figcaption>

@@ -1,24 +1,30 @@
-import { useState } from "react";
-import foto1 from "../../assets/img/Logos/logosinsombra.jpg";
-import foto2 from "../../assets/img/Logos/LOGOSPOLI1.jpg";
-import foto3 from "../../assets/img/Logos/LOGOPOLI.jpg";
+import { useEffect, useState } from "react";
+import foto1 from "../../assets/img/Logos/logoRectangular/7.png";
+import foto2 from "../../assets/img/Logos/logoRectangular/11.png";
+import foto3 from "../../assets/img/Logos/logoRectangular/15.png";
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const showSlide = () => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     const slider = document.querySelector(".slider");
     slider.style.transform = `translateX(${-currentSlide * 100}%)`;
-  };
+  }, [currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
-    showSlide();
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
-    showSlide();
   };
 
   return (

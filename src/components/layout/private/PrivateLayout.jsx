@@ -4,7 +4,7 @@ import UseAuth from "../../../hooks/UseAuth";
 
 export const PrivateLayout = () => {
   const { auth, loading } = UseAuth();
-  console.log(auth.id);
+
   if (loading) {
     return <h1>Cargando...</h1>;
   }

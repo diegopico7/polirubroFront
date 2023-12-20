@@ -44,40 +44,44 @@ export const Login = () => {
 
   return (
     <>
-      <header className="content__header content__header--public">
-        <h1 className="content__title">Login</h1>
-      </header>
-      <div className="content__posts">
-        {saved == "login" ? (
-          <strong className="alert alert-succes">
-            usuario identificado correctamente!
-          </strong>
-        ) : (
-          ""
-        )}
-        {saved == "error" ? (
-          <strong className="alert alert-danger">
-            {" "}
-            usuario no identificado
-          </strong>
-        ) : (
-          ""
-        )}
-        <form className="form-login" onSubmit={loginUser}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" onChange={changed} />
+      <div className="contenedor-log">
+        <div className="cont-aviso">
+          {saved == "login" ? (
+            <h1 className="ident-correctamente">
+              Usuario identificado correctamente!
+            </h1>
+          ) : (
+            ""
+          )}
+          {saved == "error" ? (
+            <strong className="ident-noIdent">
+              {" "}
+              Usuario no identificado ingrese de nuevo sus datos
+            </strong>
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="inFormBackground">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="inLoginForm">
+            <form onSubmit={loginUser} className="formulario-login">
+              <div className="title">
+                <h3>Login</h3>
+              </div>
+              <div className="inputGroup">
+                <label htmlFor="email">Email</label>
+                <input type="text" name="email" onChange={changed} />
+              </div>
+              <div className="inputGroup">
+                <label htmlFor="password">Contraseña</label>
+                <input type="password" name="password" onChange={changed} />
+              </div>
+              <button className="submitForm">Log In</button>
+            </form>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Contraseña</label>
-            <input type="password" name="password" onChange={changed} />
-          </div>
-          <input
-            type="submit"
-            value="Identificate"
-            className="btn btn-succes"
-          />
-        </form>
+        </div>
       </div>
     </>
   );

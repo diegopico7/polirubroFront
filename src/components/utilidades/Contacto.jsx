@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Contacto = () => {
   return (
     <div className="contacto-contenedor">
@@ -12,8 +14,23 @@ export const Contacto = () => {
             novedades
           </p>
           <div className="iconos-redes">
-            <i className="fa-brands fa-square-instagram  fa-2xl"></i>
-            <i className="fa-brands fa-tiktok  fa-2xl"></i>
+            <NavLink
+              to="https://www.instagram.com/polirubroaconquija/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+              target="_blank"
+              rel="noreferrer"
+              className="link-red"
+            >
+              <i className="fa-brands fa-square-instagram  fa-2xl"></i>
+            </NavLink>
+            <NavLink
+              to="https://www.tiktok.com/@flovilaro25?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              className="link-red"
+              rel="noreferrer"
+            >
+              <i className="fa-brands fa-tiktok  fa-2xl"></i>
+            </NavLink>
+
             <i className="fa-brands  fa-square-whatsapp fa-2xl"></i>
             <i className="fa-brands fa-facebook  fa-2xl"></i>
           </div>
@@ -27,7 +44,14 @@ export const Contacto = () => {
             Tucumán
           </p>
           <div className="iconos-redes">
-            <i className="fa-solid fa-location-dot  fa-2xl"></i>
+            <NavLink
+              to="https://maps.app.goo.gl/WnSFg5uPHdJZd6n36"
+              target="_blank"
+              className="link-red"
+              rel="noreferrer"
+            >
+              <i className="fa-solid fa-location-dot  fa-2xl"></i>
+            </NavLink>
           </div>
         </article>
 
@@ -36,7 +60,13 @@ export const Contacto = () => {
           <h4>Chat en vivo</h4>
           <p>Dejanos tu mensaje y nos comunicaremos contigo a la brevedad</p>
           <div className="iconos-redes">
-            <i className="fa-brands fa-square-whatsapp  fa-2xl"></i>
+            <NavLink
+              to="https://api.whatsapp.com/send?phone=54938113368111"
+              target="_blank"
+              className="link-red"
+            >
+              <i className="fa-brands fa-square-whatsapp  fa-2xl"></i>
+            </NavLink>
           </div>
         </article>
       </div>

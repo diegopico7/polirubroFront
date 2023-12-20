@@ -9,16 +9,12 @@ export const EditarForm = () => {
   const { form, changed } = useForm({});
   const [resultado, setResultado] = useState("");
   const [articulo, setArticulo] = useState({});
-  const params = useParams();
 
-  useEffect(() => {
-    conseguirArticulos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params.id]);
+  const params = useParams();
 
   const conseguirArticulos = async () => {
     const { datos } = await Peticion(
-      Global.url + "articulos/" + params.id,
+      Global.url + "articulo/" + params.id,
       "GET"
     );
     console.log("Datos recibidos:", datos);
@@ -27,15 +23,22 @@ export const EditarForm = () => {
     }
   };
 
+  useEffect(() => {
+    conseguirArticulos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.id]);
+
   const editarArticulo = async (e) => {
     e.preventDefault();
-    let nuevoArticulo = form;
 
+    let nuevoArticulo = form;
+    console.log("Datos a enviar:", nuevoArticulo);
     const { datos } = await Peticion(
       Global.url + "articulo/" + params.id,
       "PUT",
       nuevoArticulo
     );
+    console.log("Respuesta de la solicitud:", datos);
     // aqui ver si succes es mayus o  min
     if (datos.status === "success") {
       setResultado("guardado");
@@ -47,14 +50,13 @@ export const EditarForm = () => {
 
       //peticion
       // eslint-disable-next-line no-unused-vars
-      const { subida } = await Peticion(
+      const respuestaSubida = await Peticion(
         Global.url + "subir/" + datos.articulo._id,
         "POST",
         formData,
         true
       );
-
-      if (subida.datos.status === "success") {
+      if (respuestaSubida.datos.status === "success") {
         setResultado("guardado");
       }
     } else {
@@ -67,7 +69,7 @@ export const EditarForm = () => {
       <h1 className="titulo-carga">Editar Articulos</h1>
       <h2>Articulo que vamos a editar</h2>
 
-      {/* <article className="articulo-contenedor">
+      <article className="articulo-contenedor">
         {articulo.imagen != "default.png" && (
           <img
             src={Global.url + "imagen/" + articulo.imagen}
@@ -85,9 +87,14 @@ export const EditarForm = () => {
         <h4>{articulo.descripcion}</h4>
         <h4>{articulo.precio}</h4>
         <h5>{articulo.categoria}</h5>
-      </article> */}
+      </article>
       <pre>{JSON.stringify(form)}</pre>
       <h2>Formulario para editar:</h2>
+      <h4>
+        Recuerda llenar todos los campos del formulario con los datos nuevos
+        sean o no cambiados
+      </h4>
+
       <form className="formulario-carga" onSubmit={editarArticulo}>
         <label htmlFor="titulo">Titulo:</label>
         <input
@@ -130,6 +137,7 @@ export const EditarForm = () => {
           <input type="submit" value="  Enviar  " />
           <input type="reset" value=" Reestrablecer " />
         </div>
+
         <strong>{resultado === "guardado" ? "Articulo guardado" : ""}</strong>
         <strong>{resultado === "error" ? "Articulo no guardado" : ""}</strong>
       </form>

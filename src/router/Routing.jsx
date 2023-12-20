@@ -13,11 +13,11 @@ import { ProductosProvider } from "../context/ProductosProvider";
 import { CarritoProvider } from "../context/CarritoProvider";
 import { Carrito } from "../carrito/Carrito";
 import { PanelControl } from "../Panel/PanelControl";
-import { Control } from "../Panel/Control";
 import { Crear } from "../Panel/Crear";
 import { Editar } from "../Panel/Editar";
 import { Borrar } from "../Panel/Borrar";
 import { EditarForm } from "../Panel/EditarForm";
+import { Ayuda } from "../Panel/Ayuda";
 
 export const Routing = () => {
   return (
@@ -38,11 +38,11 @@ export const Routing = () => {
                 <Route path="panel" element={<PanelControl />} />
                 <Route path="logout" element={<Logout />} />
                 <Route path="ventas" element={<Ventas />} />
-                <Route path="control" element={<Control />} />
                 <Route path="crear" element={<Crear />} />
                 <Route path="editar" element={<Editar />} />
                 <Route path="edicion/:id" element={<EditarForm />} />
                 <Route path="borrar" element={<Borrar />} />
+                <Route path="ayuda" element={<Ayuda />} />
               </Route>
               <Route
                 path="*"

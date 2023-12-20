@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
@@ -10,7 +11,8 @@ export const Editar = () => {
   // const [articulos, setArticulos] = useState([]);
   const [cargando, setCargando] = useState(true);
 
-  const { articulos, setArticulos } = useContext(ProductosContext);
+  const { articulos, setArticulos, actualizarProductos } =
+    useContext(ProductosContext);
 
   useEffect(() => {
     conseguirArticulos();
@@ -21,9 +23,27 @@ export const Editar = () => {
     if (datos.status === "success") {
       setArticulos(datos.articulos);
     }
-    console.log(datos.articulos);
+
     setCargando(false);
   };
+
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const response = await fetch(
+          "https://backpolirubro.onrender.com/articulos"
+        );
+        const data = await response.json();
+
+        // Actualizar el contexto con la nueva lista de productos
+        actualizarProductos(data.articulos);
+      } catch (error) {
+        console.error("Error al cargar productos:", error);
+      }
+    };
+    fetchProductos();
+  }, [actualizarProductos]);
+
   return (
     <div>
       <div>
