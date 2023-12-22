@@ -15,6 +15,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink } from "react-router-dom";
+import avatar1 from "../../../assets/img/Logos/logoRectangular/6.png";
 
 const settings = ["Profile", "Logout"];
 const pages = ["Crear", "Editar", "Borrar", "Ayuda"];
@@ -173,10 +174,7 @@ export const Nav = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="../src/assets/img/Logos/logoRectangular/6.png"
-                />
+                <Avatar alt="Remy Sharp" src={avatar1} />
               </IconButton>
             </Tooltip>
             <Menu

@@ -974,6 +974,7 @@ button {
 }
 .btn-reestablecer {
   width: 100% !important;
+  color: #fff !important;
 }
 .login-form input {
   background: transparent;
@@ -1016,6 +1017,16 @@ button {
   justify-content: space-between;
   gap: 15px;
 }
+.contenedor-editar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  background-image: url("../img/bg.svg");
+  height: 100%;
+  flex-wrap: wrap;
+}
 .card-editar {
   display: flex;
   justify-content: space-around;
@@ -1025,10 +1036,21 @@ button {
 .volver-editar {
   text-align: center;
 }
-
+.textbox {
+  color: #fff;
+}
+.img-input {
+  color: #fff !important;
+}
 .contenedor-cardEditar {
   display: flex;
   justify-content: space-around;
+}
+.result-edit-negativo {
+  color: #ef2222 !important;
+}
+.result-edit {
+  color: #fff !important;
 }
 
 /*borrar*/

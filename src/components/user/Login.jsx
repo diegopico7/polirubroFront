@@ -26,7 +26,6 @@ export const Login = () => {
     });
     const data = await request.json();
 
-    console.log(data.user);
     if (data.status == "success") {
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));

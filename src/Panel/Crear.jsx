@@ -58,66 +58,14 @@ export const Crear = () => {
               <h3 className="prev-card">{form.categoria}</h3>
               <h3 className="prev-card">${form.precio}</h3>
               {imagenPreview && <img src={imagenPreview} alt="Preview" />}
-              {/* <pre>{JSON.stringify(form)}</pre>{" "} */}
             </div>
           </article>
-          {/* <form className="formulario-carga" onSubmit={guardarArticulo}>
-          <label htmlFor="titulo">Titulo:</label>
-          <input
-            type="text"
-            name="titulo"
-            placeholder=" titulo articulo"
-            onChange={changed}
-          />
-          <label htmlFor="descripcion">Descripción:</label>
-          <input
-            type="text"
-            name="descripcion"
-            placeholder=" descripcion articulo"
-            onChange={changed}
-          />
-
-          <label htmlFor="categoria">Categoría:</label>
-          <select name="categoria" onChange={changed}>
-            <option value="libreria">libreria</option>
-            <option value="juguetes">juguetes</option>
-            <option value="bijouterie">bijouterie</option>
-            <option value="maquillaje">maquillaje</option>
-            <option value="varios">varios</option>
-          </select>
-
-          <label htmlFor="precio">Precio:</label>
-          <input
-            type="number"
-            name="precio"
-            placeholder=" $precio"
-            onChange={changed}
-          />
-
-          <label htmlFor="file0">Imagen</label>
-          <input type="file" name="file0" id="file" />
-
-          <div className="contenedor-btn">
-            <input type="submit" value="  Enviar  " />
-            <input
-              type="reset"
-              value=" Reestrablecer "
-              onClick={limpiarFormulario}
-            />
-          </div>
-
-          <strong>{resultado === "guardado" ? "Articulo guardado" : ""}</strong>
-          <strong>{resultado === "error" ? "Articulo no guardado" : ""}</strong>
-        </form>*/}
-
           <div className="nuevo-form">
             <div className="login-nuevo">
               <div className="avatar">
                 <img src={avatar12} alt="avatar" />
               </div>
-
               <h3>Crear Productos</h3>
-
               <form className="login-form" onSubmit={guardarArticulo}>
                 <div className="textbox">
                   <input
@@ -168,8 +116,10 @@ export const Crear = () => {
                     className="btn-crear btn-reestablecer"
                   />
                 </div>
-                <h3>{resultado === "guardado" ? "Articulo guardado" : ""}</h3>
-                <strong>
+                <h3 className="result-edit">
+                  {resultado === "guardado" ? "Articulo guardado" : ""}
+                </h3>
+                <strong className="result-edit">
                   {resultado === "error" ? "Articulo no guardado" : ""}
                 </strong>
               </form>
