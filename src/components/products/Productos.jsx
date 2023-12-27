@@ -14,7 +14,7 @@ export const Productos = () => {
           <NavLink to="/productos" className="card">
             <figure>
               <img src={jugueteria} alt="carta1" />
-              <figcaption>
+              <figcaption className="fig-productos">
                 <h3 className="card-text">Jugueteria</h3>
               </figcaption>
             </figure>
@@ -22,7 +22,7 @@ export const Productos = () => {
           <NavLink to="/productos" className="card">
             <figure>
               <img src={libreria} alt="carta2" />
-              <figcaption>
+              <figcaption className="fig-productos">
                 <h3 className="card-text">Libreria</h3>
               </figcaption>
             </figure>
@@ -30,7 +30,7 @@ export const Productos = () => {
           <NavLink to="/productos" className="card">
             <figure>
               <img src={maquillaje} alt="carta3" />
-              <figcaption>
+              <figcaption className="fig-productos">
                 <h3 className="card-text">Maquillaje</h3>
               </figcaption>
             </figure>
@@ -38,7 +38,7 @@ export const Productos = () => {
           <NavLink to="/productos" className="card">
             <figure>
               <img src={bijouterie} alt="carta3" />
-              <figcaption>
+              <figcaption className="fig-productos">
                 <h3 className="card-text">Bijouterie</h3>
               </figcaption>
             </figure>
@@ -46,7 +46,7 @@ export const Productos = () => {
           <NavLink to="/productos" className="card">
             <figure>
               <img src={varios} alt="carta3" />
-              <figcaption>
+              <figcaption className="fig-productos">
                 <h3 className="card-text">Varios</h3>
               </figcaption>
             </figure>

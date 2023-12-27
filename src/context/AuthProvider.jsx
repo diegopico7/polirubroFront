@@ -33,9 +33,6 @@ export const AuthProvider = ({ children }) => {
       },
     });
     const data = await request.json();
-    console.log(data.user);
-    //setear el estado de auth
-
     setAuth(data.user);
     setLoading(false);
   };

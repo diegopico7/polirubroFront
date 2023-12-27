@@ -24,7 +24,6 @@ export const Register = () => {
     } else {
       setSaved("error");
     }
-    console.log(data);
   };
   return (
     <>

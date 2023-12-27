@@ -576,7 +576,7 @@ button {
   .card {
     max-width: none;
   }
-  figcaption {
+  .fig-productos {
     font-size: 0.6rem;
     position: absolute;
     height: 80px;
@@ -1212,4 +1212,84 @@ button {
 }
 .submitForm:hover::before {
   left: 0%;
+}
+
+/*ayuda*/
+.ayuda-titulo {
+  text-align: center;
+  margin: 15px 0px;
+}
+
+.contenedor-ayuda {
+  width: 100%;
+  margin: 5px;
+}
+
+.titulo-indice {
+  margin: 5px 0px;
+  padding: 3px;
+  font-size: 20px;
+}
+
+.lista-indice {
+  padding: 15px;
+  margin: 8px 0px;
+}
+.lista-indice li {
+  list-style: circle !important;
+  padding: 3px;
+}
+
+.contenedor-secciones-ayuda h3 {
+  padding: 5px;
+  margin: 15px 0px;
+  font-size: 20px;
+}
+.contenedor-secciones-ayuda p {
+  padding: 5px;
+  margin: 15px 0px;
+}
+
+.img-ayuda-panel {
+  width: 80%;
+  margin: 0 auto;
+}
+.figcaption-ayuda {
+  text-align: center;
+}
+.figure-ayuda img {
+  margin: 0 auto;
+  border-radius: 5%;
+}
+.img-large {
+  width: 80%;
+}
+.recordatorio-ayuda {
+  color: #ac2925;
+  font-weight: 700;
+  padding: 0px 8px;
+}
+
+.flecha-inicio {
+  margin-top: 25px;
+}
+.flecha-inicio-link img {
+  margin: 0 auto;
+}
+
+.flecha-inicio-link p {
+  text-align: center;
+  text-decoration: none;
+  color: #080710;
+}
+.volver-ayuda {
+  margin: 15px 5px;
+}
+.link-volver-ayuda {
+  color: #080710;
+  text-decoration: none;
+}
+
+.descarga-titulo {
+  margin: 15px 0px;
 }

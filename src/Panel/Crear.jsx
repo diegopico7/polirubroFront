@@ -119,9 +119,9 @@ export const Crear = () => {
                 <h3 className="result-edit">
                   {resultado === "guardado" ? "Articulo guardado" : ""}
                 </h3>
-                <strong className="result-edit">
+                <h3 className="result-edit-negativo">
                   {resultado === "error" ? "Articulo no guardado" : ""}
-                </strong>
+                </h3>
               </form>
             </div>
           </div>

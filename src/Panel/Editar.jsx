@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { Peticion } from "../helpers/Peticion";
-import { Global } from "@emotion/react";
+import { Global } from "../helpers/Global";
 import { ListadoEditar } from "../components/utilidades/ListadoEditar";
 import { ProductosContext } from "../context/ProductosContext";
 
@@ -14,18 +14,18 @@ export const Editar = () => {
   const { articulos, setArticulos, actualizarProductos } =
     useContext(ProductosContext);
 
-  useEffect(() => {
-    conseguirArticulos();
-  }, []);
+  // useEffect(() => {
+  //   conseguirArticulos();
+  // }, []);
 
-  const conseguirArticulos = async () => {
-    const { datos } = await Peticion(Global.url + "articulos", "GET");
-    if (datos.status === "success") {
-      setArticulos(datos.articulos);
-    }
+  // const conseguirArticulos = async () => {
+  //   const { datos } = await Peticion(Global.url + "articulos", "GET");
+  //   if (datos.status === "success") {
+  //     setArticulos(datos.articulos);
+  //   }
 
-    setCargando(false);
-  };
+  //   setCargando(false);
+  // };
 
   useEffect(() => {
     const fetchProductos = async () => {
